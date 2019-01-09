@@ -4,6 +4,8 @@ import { Colors } from '../../common/colors';
 export const styles  = StyleSheet.create({
     container: {
         flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     button: {
         backgroundColor: Colors.primary,
@@ -16,9 +18,5 @@ export const styles  = StyleSheet.create({
     buttonText: {
         color: 'white',
         fontSize: 18,
-    },
-    list: {
-        flex: 1,
-        marginTop: 50,
     },
 });
