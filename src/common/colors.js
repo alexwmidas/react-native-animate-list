@@ -1,3 +1,3 @@
 export const Colors = {
-    primary: '#1DB954',
+  primary: '#1DB954',
 };

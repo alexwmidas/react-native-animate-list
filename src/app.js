@@ -11,14 +11,14 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 
 import { MainContainer } from './containers';
-import store from "./store";
+import store from './store';
 
 export default class App extends Component {
   render() {
     return (
-        <Provider store={store}>
-            <MainContainer />
-        </Provider>
+      <Provider store={store}>
+        <MainContainer />
+      </Provider>
     );
   }
 }
