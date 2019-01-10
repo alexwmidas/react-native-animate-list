@@ -24,6 +24,11 @@ export default class ListItem extends Component {
   }
 
   componentDidMount() {
+    // Separate the animation into two parts:
+    // First: Slide Up animation
+    // Second: Margin change animation - I found that margins between the listItems are same in the gif animation
+    // ** I used the bezier animation with timing - you can test about that from here: http://cubic-bezier.com
+
     Animated.parallel([
       Animated.timing(this.state.slideAnim, {
         toValue: 0,
@@ -66,7 +71,7 @@ export default class ListItem extends Component {
       return (
         <Animated.View style={animatedStyle}>
           <Image
-            defaultSource={getImageFromName('user1')}
+            source={getImageFromName('user1')}
             // source={{ uri: data.avatar_url }}
             style={styles.imgAvatar}
           />
