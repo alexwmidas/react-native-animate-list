@@ -29,11 +29,13 @@ export default class ListItem extends Component {
         toValue: 0,
         easing: Easing.bezier(0, 1, 0, 1),
         duration: 1000,
+        delay: 100,
       }),
       Animated.timing(this.state.marginAnim, {
         toValue: 5,
         easing: Easing.bezier(0, 1, 0, 1),
         duration: 1000,
+        delay: 100,
       }),
     ]).start();
   }
