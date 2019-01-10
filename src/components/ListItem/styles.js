@@ -32,4 +32,11 @@ export const styles  = StyleSheet.create({
     description: {
         fontSize: 12,
     },
+    txtTitle: {
+        flex: 1,
+        textAlign: 'center',
+        fontSize: 24,
+        color: 'white',
+        fontWeight: 'bold',
+    }
 });

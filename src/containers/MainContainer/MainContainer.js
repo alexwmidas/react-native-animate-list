@@ -640,29 +640,30 @@ class MainContainer extends PureComponent {
         console.log("Users=", user.users);
         return (
             <View style={styles.container}>
-                <AnimatedList
-                    style={styles.list}
-                    data={testData}
-                />
-                {/*{*/}
-                    {/*(user.users && user.users.length > 0) ? (*/}
-                        {/*<AnimatedList data={user.users}/>*/}
-                    {/*) : (*/}
-                        {/*<TouchableOpacity*/}
-                            {/*onPress={this.onPressStart}*/}
-                            {/*style={styles.button}*/}
-                        {/*>*/}
-                            {/*{*/}
-                                {/*user.isFetching === true ? (*/}
-                                    {/*<ActivityIndicator size="small" color="#ffffff" />*/}
-                                {/*) : (*/}
-                                    {/*<Text style={styles.buttonText}>Start</Text>*/}
-                                {/*)*/}
-                            {/*}*/}
+                {
+                    (user.users && user.users.length > 0) ? (
+                        <AnimatedList
+                            style={styles.list}
+                            data={testData}
+                        />
+                    ) : (
+                        <View style={styles.buttonContainer}>
+                            <TouchableOpacity
+                                onPress={this.onPressStart}
+                                style={styles.button}
+                            >
+                                {
+                                    user.isFetching === true ? (
+                                        <ActivityIndicator size="small" color="#ffffff" />
+                                    ) : (
+                                        <Text style={styles.buttonText}>Start</Text>
+                                    )
+                                }
 
-                        {/*</TouchableOpacity>*/}
-                    {/*)*/}
-                {/*}*/}
+                            </TouchableOpacity>
+                        </View>
+                    )
+                }
             </View>
         );
     }

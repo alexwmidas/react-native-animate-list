@@ -4,7 +4,8 @@ import {
     Text,
     FlatList,
     TouchableOpacity,
-    ActivityIndicator
+    ActivityIndicator,
+    View,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -21,9 +22,12 @@ export default class AnimatedList extends Component {
 
     _keyExtractor = (item, index) => item.node_id;
 
-    renderListItem = ({ item }) => (
+    renderListItem = ({ item, index }) => (
         <ListItem
+            style={index === 0 ? styles.firstCardItem : {}}
+            isCardItem={index === 0}
             data={item}
+            dataIndex={index}
         />
     );
 

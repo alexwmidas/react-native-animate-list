@@ -19,4 +19,8 @@ export const styles  = StyleSheet.create({
         color: 'white',
         fontSize: 18,
     },
+    firstCardItem: {
+        height: 200,
+        backgroundColor: 'rgba(118, 115, 234, 0.9)',
+    },
 });
