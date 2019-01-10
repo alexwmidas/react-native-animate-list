@@ -20,8 +20,6 @@ export default class ListItem extends Component {
     this.state = {
       slideAnim: new Animated.Value(height - 50),
       marginAnim: new Animated.Value(300),
-      subSlideAnim: new Animated.Value(-35),
-      isShowSubview: false,
     };
   }
 
